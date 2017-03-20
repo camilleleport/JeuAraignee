@@ -8,6 +8,9 @@ class Serveur
 {
 public:
     Serveur();
+    int[] getOccupation();
+    void jouerUnCoup(int zone);
+    
 private :
     int Occupation[9];
     int JoueurQuiALaMain;

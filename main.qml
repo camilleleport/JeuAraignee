@@ -24,7 +24,10 @@ ApplicationWindow {
 
     MainForm {
         anchors.fill: parent
-
+        id:page
+        zone1 {
+            onClicked:serveur.joueruncoup()
+        }
     }
 
     MessageDialog {
