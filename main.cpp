@@ -10,8 +10,8 @@ int main(int argc, char *argv[])
     Serveur Plateau;
 
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextProperty("vueObjetCpt", &Plateau);
-    
+    engine.rootContext()->setContextProperty("vueObjetSrvr", &Plateau);
+
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     return app.exec();

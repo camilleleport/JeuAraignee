@@ -7,7 +7,18 @@ Item {
     id: item1
     width: 400
     height: 450
+    property alias zone0: zone0
     property alias zone1: zone1
+    property alias zone2: zone2
+    property alias zone3: zone3
+    property alias zone4: zone4
+    property alias zone5: zone5
+    property alias zone6: zone6
+    property alias zone7: zone7
+    property alias zone8: zone8
+
+
+
 
     Text {
         id: titre
@@ -25,7 +36,7 @@ Item {
         id: instructions
         x: 121
         y: 405
-        text: qsTr("Text")
+        text: vueObjetSrvr.txtQML
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 30
         anchors.horizontalCenterOffset: 1
@@ -53,6 +64,19 @@ Item {
             anchors.leftMargin: 0
             anchors.top: parent.top
             anchors.topMargin: 0
+
+            Rectangle {
+                id: rectangle
+                x: 0
+                y: 0
+                width: 40
+                height: 40
+                color: vueObjetSrvr.srvrQML[0]
+                anchors.verticalCenterOffset: -15
+                anchors.horizontalCenterOffset: -15
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
         }
 
         MouseArea {
@@ -63,6 +87,19 @@ Item {
             anchors.top: parent.top
             anchors.topMargin: 0
             anchors.horizontalCenter: parent.horizontalCenter
+
+            Rectangle {
+                id: rectangle1
+                x: 0
+                y: 0
+                width: 40
+                height: 40
+                color: vueObjetSrvr.srvrQML[1]
+                anchors.horizontalCenterOffset: 0
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenterOffset: -15
+            }
         }
 
         MouseArea {
@@ -74,6 +111,19 @@ Item {
             anchors.topMargin: 0
             anchors.right: parent.right
             anchors.rightMargin: 0
+
+            Rectangle {
+                id: rectangle2
+                x: 0
+                y: 0
+                width: 40
+                height: 40
+                color: vueObjetSrvr.srvrQML[2]
+                anchors.horizontalCenterOffset: 15
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenterOffset: -15
+            }
         }
 
         MouseArea {
@@ -84,6 +134,19 @@ Item {
             anchors.left: parent.left
             anchors.leftMargin: 0
             anchors.verticalCenter: parent.verticalCenter
+
+            Rectangle {
+                id: rectangle3
+                x: 0
+                y: 0
+                width: 40
+                height: 40
+                color: vueObjetSrvr.srvrQML[3]
+                anchors.horizontalCenterOffset: -15
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenterOffset: 0
+            }
         }
 
         MouseArea {
@@ -92,6 +155,19 @@ Item {
             height: 100
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
+
+            Rectangle {
+                id: rectangle4
+                x: 0
+                y: 0
+                width: 40
+                height: 40
+                color: vueObjetSrvr.srvrQML[4]
+                anchors.horizontalCenterOffset: 0
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenterOffset: 0
+            }
         }
 
         MouseArea {
@@ -101,6 +177,19 @@ Item {
             anchors.right: parent.right
             anchors.rightMargin: 0
             anchors.verticalCenter: parent.verticalCenter
+
+            Rectangle {
+                id: rectangle5
+                x: 0
+                y: 0
+                width: 40
+                height: 40
+                color: vueObjetSrvr.srvrQML[5]
+                anchors.horizontalCenterOffset: 15
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenterOffset: 0
+            }
         }
 
         MouseArea {
@@ -112,6 +201,19 @@ Item {
             anchors.leftMargin: 0
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 0
+
+            Rectangle {
+                id: rectangle6
+                x: 0
+                y: 0
+                width: 40
+                height: 40
+                color: vueObjetSrvr.srvrQML[6]
+                anchors.horizontalCenterOffset: -15
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenterOffset: 15
+            }
         }
 
         MouseArea {
@@ -123,6 +225,19 @@ Item {
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 0
             anchors.horizontalCenter: parent.horizontalCenter
+
+            Rectangle {
+                id: rectangle7
+                x: 0
+                y: 0
+                width: 40
+                height: 40
+                color: vueObjetSrvr.srvrQML[7]
+                anchors.horizontalCenterOffset: 0
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenterOffset: 15
+            }
         }
 
         MouseArea {
@@ -135,6 +250,19 @@ Item {
             anchors.bottomMargin: 0
             anchors.right: parent.right
             anchors.rightMargin: 0
+
+            Rectangle {
+                id: rectangle8
+                x: 0
+                y: 0
+                width: 40
+                height: 40
+                color: vueObjetSrvr.srvrQML[8]
+                anchors.horizontalCenterOffset: 15
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenterOffset: 15
+            }
         }
 
         Rectangle {

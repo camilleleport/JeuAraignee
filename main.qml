@@ -25,10 +25,35 @@ ApplicationWindow {
     MainForm {
         anchors.fill: parent
         id:page
+        zone0 {
+            onClicked:vueObjetSrvr.jouerUnCoup(0)
+        }
         zone1 {
-            onClicked:serveur.joueruncoup()
+            onClicked:vueObjetSrvr.jouerUnCoup(1)
+        }
+        zone2 {
+            onClicked:vueObjetSrvr.jouerUnCoup(2)
+        }
+        zone3 {
+            onClicked:vueObjetSrvr.jouerUnCoup(3)
+        }
+        zone4 {
+            onClicked:vueObjetSrvr.jouerUnCoup(4)
+        }
+        zone5 {
+            onClicked:vueObjetSrvr.jouerUnCoup(5)
+        }
+        zone6 {
+            onClicked:vueObjetSrvr.jouerUnCoup(6)
+        }
+        zone7 {
+            onClicked:vueObjetSrvr.jouerUnCoup(7)
+        }
+        zone8 {
+            onClicked:vueObjetSrvr.jouerUnCoup(8)
         }
     }
+
 
     MessageDialog {
         id: messageDialog
@@ -40,3 +65,4 @@ ApplicationWindow {
         }
     }
 }
+
