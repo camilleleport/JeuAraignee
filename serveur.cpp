@@ -15,7 +15,7 @@ Serveur::Serveur()
 
     PionSelect=new Pion(0); //Pion arbitraire.
 
-
+    Joueurs[0]=new Joueur("Raymond Deubaze"); //Faux joueur pour ne pas avoir Joueurs[0] vide
     Joueurs[1]=new Joueur("Camille");
     Joueurs[2]=new Joueur("Romain");
     Joueurs[1]->selectionnePion(2); //Pion arbitraire
@@ -32,13 +32,13 @@ Serveur::~Serveur()
         PionSelect=NULL;
 
     }
-//    if (Joueurs !=NULL){    //Fait planter le programme à sa fermeture mais je ne sais pas pourquoi
-//        for (int i=0; i<3; i++){
+    if (Joueurs !=NULL){
+        for (int i=0; i<3; i++){
 
-//            delete [] Joueurs[i];
-//            Joueurs[i]=NULL;
-//        }
-//    }
+            delete [] Joueurs[i];
+            Joueurs[i]=NULL;
+        }
+    }
 }
 
 Serveur::Serveur(const Serveur& S)
