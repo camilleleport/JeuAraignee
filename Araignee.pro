@@ -5,7 +5,9 @@ QT += qml quick
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    serveur.cpp
+    serveur.cpp \
+    joueur.cpp \
+    pion.cpp
 
 RESOURCES += qml.qrc
 
@@ -32,4 +34,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    serveur.h
+    serveur.h \
+    joueur.h \
+    pion.h
