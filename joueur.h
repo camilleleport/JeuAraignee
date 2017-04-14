@@ -16,7 +16,7 @@ public:
     void setNom(string nom);
     void placePion(int z);
     bool victoire();
-    Pion selectionnePion(int n);
+    Pion* selectionnePion(int n);
 
 
 private:

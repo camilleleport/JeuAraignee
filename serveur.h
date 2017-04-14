@@ -28,6 +28,10 @@ signals:
     void txtChanged();
 
 private :
+    void placement(int zone);
+    void selection(int zone);
+    void deplacement(int zone);
+
     QList<QString> Occupation;
     int JoueurQuiALaMain;
     int tour;

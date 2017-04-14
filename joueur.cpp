@@ -4,14 +4,10 @@
 Joueur::Joueur (string name){
     nom=name; //nom du joueur
 
-
-    // Le pb c'est qu'il ne sait pas comment construire un tableau de pions... Il comprend pas ce que c'est
-    //C'est bon !
-
     ind=0; //Cet entier n'est utile que pour placer les 3 premiers pions dans la liste.
     Jeu[0]=new Pion(0); // il faut initialiser le tableau avec des pions sinon ça marche pas
-    Jeu[1]=new Pion(0);
-    Jeu[2]=new Pion(0);
+    Jeu[1]=new Pion(1);
+    Jeu[2]=new Pion(2);
 }
 
 /*
@@ -55,14 +51,15 @@ bool  Joueur::victoire(){
     return victoire;
 }
 
-Pion Joueur::selectionnePion(int n){
+Pion* Joueur::selectionnePion(int n){
     //Le joueur sélectionne un pion qui lui appartient.
     //Traitement est programmé pour que la fonction ne renvoie pas null
-    Pion pionSelect=NULL;
-    for (int i = 0; i<int(sizeof(Jeu)); i++ ) {
-        int p=Jeu[i]->getNumero();
+    Pion *pionSelect=NULL;
+    int p;
+    for (int i = 0; i<3; i++ ) {
+        p=Jeu[i]->getNumero();
         if (n==p){
-            pionSelect=p;
+            pionSelect=Jeu[i];
         }
     }
     return pionSelect;
