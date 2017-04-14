@@ -10,7 +10,8 @@ class Joueur
 {
 public:
     Joueur(string name);
-    //~Joueur();
+    ~Joueur();
+    Joueur(const Joueur& J1);
 
     string getNom();
     void setNom(string nom);

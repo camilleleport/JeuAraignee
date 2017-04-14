@@ -14,6 +14,8 @@ class Serveur: public QObject
     Q_OBJECT
 public:
     Serveur();
+    ~Serveur();
+    Serveur(const Serveur& S);
     Q_INVOKABLE void jouerUnCoup(int zone);
 
 
@@ -43,9 +45,8 @@ private :
     QString texte;
     string nom;
     Pion* PionSelect;
-    Joueur* Joueurs[3]; // il fallait construire ça comme ça, c'est ça qui ne marchait pas
-    //int Occupation[9];
-    //list<Joueur> Joueurs;
+    Joueur* Joueurs[3];
+
 };
 
 #endif // SERVEUR_H

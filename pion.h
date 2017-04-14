@@ -8,7 +8,6 @@ class Pion
 {
 public:
     Pion(int n);
-    //~Pion();
 
     int getLigne();
     int getColonne();

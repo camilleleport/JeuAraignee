@@ -19,17 +19,18 @@ Item {
 
 
 
-
     Text {
         id: titre
         x: 187
+        width: 180
+        height: 28
         color: "#820808"
         text: qsTr("Jeu de l'Araignée")
+        anchors.horizontalCenter: parent.horizontalCenter
         font.bold: true
         anchors.top: parent.top
         anchors.topMargin: 20
-        anchors.horizontalCenter: parent.horizontalCenter
-        font.pixelSize: 19
+        font.pixelSize: 21
     }
 
     Text {
@@ -37,10 +38,9 @@ Item {
         x: 121
         y: 405
         text: vueObjetSrvr.txtQML
+        anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 30
-        anchors.horizontalCenterOffset: 1
-        anchors.horizontalCenter: parent.horizontalCenter
         font.pixelSize: 18
     }
 
@@ -51,10 +51,9 @@ Item {
         width: 323
         height: 323
         color: "#ffffff"
-        anchors.verticalCenterOffset: 0
-        anchors.horizontalCenterOffset: 0
-        anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenterOffset: 0
+        anchors.verticalCenter: parent.verticalCenter
 
         MouseArea {
             id: zone0
