@@ -15,14 +15,48 @@ Serveur::Serveur()
 
     PionSelect=new Pion(0); //Pion arbitraire.
 
-    //Je garde volontairement Joueurs[0]=null pour éviter une confusion d'indice 0/1-1/2
-    //Joueurs[0]=NULL;
+
     Joueurs[1]=new Joueur("Camille");
     Joueurs[2]=new Joueur("Romain");
     Joueurs[1]->selectionnePion(2); //Pion arbitraire
 
     texte=("Bienvenue dans le jeu de l'Araignee, " +Joueurs[JoueurQuiALaMain]->getNom()+" à toi de commencer").c_str();
 
+
+}
+
+Serveur::~Serveur()
+{
+    if (PionSelect != NULL) {
+        delete [] PionSelect;
+        PionSelect=NULL;
+
+    }
+//    if (Joueurs !=NULL){    //Fait planter le programme à sa fermeture mais je ne sais pas pourquoi
+//        for (int i=0; i<3; i++){
+
+//            delete [] Joueurs[i];
+//            Joueurs[i]=NULL;
+//        }
+//    }
+}
+
+Serveur::Serveur(const Serveur& S)
+{
+    col0=S.col0;
+    col1=S.col1;
+    col2=S.col2;
+    col3=S.col3;
+    for(int i=0; i<9; i++){
+        Occupation<<S.Occupation[i];
+    }
+    tour=S.tour;
+    phase=S.phase;
+    JoueurQuiALaMain=S.JoueurQuiALaMain;
+    PionSelect=S.PionSelect;
+    Joueurs[1]=S.Joueurs[1];
+    Joueurs[2]=S.Joueurs[2];
+    texte=S.texte;
 
 }
 
@@ -35,6 +69,7 @@ QString Serveur::readTxt()
 {
     return QString(texte);
 }
+
 
 void Serveur::jouerUnCoup(int zone){
     //Cette fonction est appelé dès qu'un joueur clique sur la zone de jeu.

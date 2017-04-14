@@ -7,18 +7,7 @@ Pion::Pion(int n)
     colonne=n%3;
     ligne=(n-colonne)/3;
 }
-/*
-Pion::~Pion(){
-    if (numero != NULL) {
-        delete [] numero;
-        delete [] colonne;
-        delete [] ligne;
-        numero=NULL;
-        ligne=NULL;
-        colonne=NULL;
-    }
-}
-*/
+
 
 int Pion::getLigne() {
     return ligne;
@@ -60,4 +49,3 @@ bool Pion::estVoisin(int n){
         tmp=true;
     return tmp;
 }
-

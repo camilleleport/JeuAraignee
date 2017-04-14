@@ -5,22 +5,31 @@ Joueur::Joueur (string name){
     nom=name; //nom du joueur
 
     ind=0; //Cet entier n'est utile que pour placer les 3 premiers pions dans la liste.
-    Jeu[0]=new Pion(0); // il faut initialiser le tableau avec des pions sinon ça marche pas
+    Jeu[0]=new Pion(0);
     Jeu[1]=new Pion(1);
     Jeu[2]=new Pion(2);
 }
 
-/*
+
 Joueur::~Joueur(){
-    if (nom != NULL) {
-        delete [] nom;
-        delete [] ind;
-        delete [] Jeu;
-        nom=NULL;
-        ind=NULL;
-        Jeu=NULL;
+    if (Jeu != NULL) {
+        for (int i=0; i<3 ; i++){
+            delete [] Jeu[i];
+            Jeu[i]=NULL;
+        }
     }
-}*/
+}
+
+Joueur::Joueur(const Joueur& J){
+    nom=J.nom;
+    ind=J.ind;
+    Jeu[0]=new Pion(0);
+    Jeu[1]=new Pion(1);
+    Jeu[2]=new Pion(2);
+    for (int i=0; i<3; i++){
+        Jeu[i]=J.Jeu[i];
+    }
+}
 
 string Joueur::getNom() {
     return nom;
